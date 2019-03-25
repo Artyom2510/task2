@@ -1,0 +1,110 @@
+body
+	background-color: #fff8da
+
+.middle-wrap
+	position: relative
+	display: block
+	width: 700px
+	margin: 200px auto
+	overflow-x: scroll
+	&::-webkit-scrollbar
+		width: 100%
+		height: 20px
+		background-color: #fff
+	&::-webkit-scrollbar-thumb
+		height: 140px
+		background-color: #000000
+	&::-webkit-scrollbar-track
+		background-color: #fff
+	&::-webkit-scrollbar-button
+		width: 20px
+		height: 20px
+		background: url('/img/arrow-down.svg') 50% 50% no-repeat red
+	&__label-time
+		position: relative
+		display: flex
+	&__period
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		width: 60px
+		height: 30px
+		padding: 0 10px
+		background-color: #fff
+		border: solid 1px #979797
+		border-bottom: none
+		box-sizing: border-box
+		&:nth-child(even)
+			border-left: none
+			border-right: none
+		&:last-child
+			border-right: solid 1px #979797
+
+.timeline
+	position: absolute
+	z-index: 1
+	bottom: 0
+	display: block
+	min-width: 30px
+	height: 50px
+	overflow: hidden
+	background-color: #5ad085
+	&__left,
+	&__right
+		position: absolute
+		z-index: 2
+		top: 0
+		display: block
+		width: 10px
+		height: 100%
+		cursor: ew-resize
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			z-index: 3
+			top: 50%
+			transform: translateY(-50%)
+			display: inline-block
+			width: 1px
+			height: 8px
+			background-color: #fff
+		&::before
+			left: 3px
+		&::after
+			right: 3px
+	&__left
+		left: 0
+	&__right
+		right: 0
+	&.display
+		display: block
+
+.date-block
+	display: flex
+
+.hour-block
+	display: flex
+	width: 60px
+	border: solid 1px #979797
+	border-top: none
+	box-sizing: border-box
+	&:nth-child(even)
+		border-left: none
+		border-right: none
+	&:last-child
+		border-right: solid 1px #979797
+	&__half
+		display: block
+		width: 30px
+		height: 50px
+		box-sizing: border-box
+		background-color: #fff
+		transition: all .3s ease
+		cursor: pointer
+		&:first-child
+			border-right: 1px dashed black
+		&:hover
+			background-color: #5ad085
+			opacity: 0.5
