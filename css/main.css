@@ -1,4 +1,6 @@
 body {
+	margin: 0;
+	padding: 0;
 	background-color: #fff8da;
 }
 
@@ -29,8 +31,6 @@ body {
 	width: 20px;
 	height: 20px;
 	background: url("/img/arrow-down.svg") 50% 50% no-repeat red;
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
 }
 
 .middle-wrap__label-time {
@@ -81,10 +81,11 @@ body {
 	z-index: 1;
 	bottom: 0;
 	display: block;
-	min-width: 30px;
-	height: 50px;
+	width: 30px;
+	height: 51px;
 	overflow: hidden;
 	background-color: #5ad085;
+	cursor: pointer;
 }
 
 .timeline__left, .timeline__right {
